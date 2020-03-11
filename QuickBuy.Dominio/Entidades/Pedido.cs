@@ -29,11 +29,11 @@ namespace QuickBuy.Dominio.Entidades
             LimparMensagensValidacao();
 
             if (!ItensPedidos.Any())
-                mensagemValidacao.Add("Critica-Pedido nao pode ficar sem item de pedido");
+                AdicionarCritica("Critica-Pedido nao pode ficar sem item de pedido");
 
             if (string.IsNullOrEmpty(CEP))
             {
-                mensagemValidacao.Add("CEP - CEP deve ser preeenchido");
+                AdicionarCritica("CEP - CEP deve ser preeenchido");
             }
               
 
