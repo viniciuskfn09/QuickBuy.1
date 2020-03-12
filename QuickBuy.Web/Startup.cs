@@ -28,7 +28,8 @@ namespace QuickBuy.Web
         {
             var connectionString = Configuration.GetConnectionString("QuickBuyDB");
             services.AddDbContext<QuickBuyContexto>(option =>
-                                     option.UseMySql(connectionString, m => m.MigrationsAssembly("QuickBuy.Repositorio")));
+                                      option.UseLazyLoadingProxies()
+                                      .UseMySql(connectionString, m => m.MigrationsAssembly("QuickBuy.Repositorio"))); ; ; ;
 
             services.AddControllersWithViews();
             // In production, the Angular files will be served from this directory

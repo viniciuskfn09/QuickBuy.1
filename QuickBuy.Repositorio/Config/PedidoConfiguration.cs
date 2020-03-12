@@ -41,6 +41,9 @@ namespace QuickBuy.Repositorio.Config
                 .IsRequired()
                 .HasMaxLength(100);
 
+            builder.HasOne(p => p.Usuario);
+            
+
             
 
             

@@ -29,6 +29,13 @@ namespace QuickBuy.Repositorio.Config
                    .IsRequired()
                    .HasMaxLength(50);
 
+            builder
+                .HasMany(u => u.Pedidos)
+                .WithOne(p => p.Usuario);
+            //Configuraçao de um (ou zero) para muitos .
+            //Has many recebendo usuario de pedidos.Usuario= classe pai.
+            //With one recebendo pedidos de usuario.Pedido = classe filha.
+
             
                    
                    
