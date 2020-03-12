@@ -12,6 +12,7 @@ namespace QuickBuy.Web
     {
         public Startup(IConfiguration configuration)
         {
+            var builder = new configuration
             Configuration = configuration;
         }
 
