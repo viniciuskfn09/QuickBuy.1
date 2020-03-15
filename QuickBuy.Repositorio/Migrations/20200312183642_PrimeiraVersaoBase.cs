@@ -121,7 +121,7 @@ namespace QuickBuy.Repositorio.Migrations
                 name: "IX_Pedidos_UsuarioId",
                 table: "Pedidos",
                 column: "UsuarioId");
-        }
+        } // Up = para cada arquivo de migrations criado para criar e replicar as alteraçoes.
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
@@ -139,6 +139,6 @@ namespace QuickBuy.Repositorio.Migrations
 
             migrationBuilder.DropTable(
                 name: "Usuarios");
-        }
+        }//Down= Desfazer alterações.
     }
 }

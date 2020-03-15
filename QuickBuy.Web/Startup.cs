@@ -26,6 +26,7 @@ namespace QuickBuy.Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddMvc().SetCompatibilityVersion(Microsoft.AspNetCore.Mvc.CompatibilityVersion.Version_3_0);
             var connectionString = Configuration.GetConnectionString("QuickBuyDB");
             services.AddDbContext<QuickBuyContexto>(option =>
                                       option.UseLazyLoadingProxies()
