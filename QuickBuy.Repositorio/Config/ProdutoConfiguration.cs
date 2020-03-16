@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using QuickBuy.Dominio.Contratos;
 using QuickBuy.Dominio.Entidades;
 using System;
 using System.Collections.Generic;
