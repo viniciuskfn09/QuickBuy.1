@@ -13,6 +13,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="angular-load.TypeScript.DefinitelyTyped" Version="0.7.3" />
     <PackageReference Include="EntityFramework" Version="6.4.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.1" />
     <PackageReference Include="Microsoft.AspNetCore.NodeServices" Version="3.1.1" />
@@ -36,6 +37,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="ClientApp\src\app\app.server.module.ts" />
     <None Remove="ClientApp\src\app\produto\produtocomponent.ts" />
   </ItemGroup>
 
@@ -80,5 +82,7 @@
       </ResolvedFileToPublish>
     </ItemGroup>
   </Target>
+
+  <ProjectExtensions><VisualStudio><UserProperties config_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
 
 </Project>

@@ -16,8 +16,11 @@ namespace QuickBuy.Web
     public class Startup
     {
         public IConfiguration Configuration { get; }
+        readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 
         public Startup(IConfiguration configuration)
+
+
         {
             var builder = new ConfigurationBuilder();
             builder.AddJsonFile("config.json",optional: false, reloadOnChange:true);
@@ -60,6 +63,7 @@ namespace QuickBuy.Web
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+            app.UseCors(MyAllowSpecificOrigins);
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
@@ -86,7 +90,7 @@ namespace QuickBuy.Web
 
                 if (env.IsDevelopment())
                 {
-                    spa.UseAngularCliServer(npmScript: "start");
+                    //spa.UseAngularCliServer(npmScript: "start");
                     spa.UseProxyToSpaDevelopmentServer("http://localhost:4200/");
                 }
             });

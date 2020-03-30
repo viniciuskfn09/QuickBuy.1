@@ -7,8 +7,7 @@ using Microsoft.Extensions.Logging;
 
 namespace QuickBuy.Web.Controllers
 {
-    [ApiController]
-    [Route("[controller]")]
+    [Route("api/[Controller]")]
     public class WeatherForecastController : ControllerBase
     {
         private static readonly string[] Summaries = new[]

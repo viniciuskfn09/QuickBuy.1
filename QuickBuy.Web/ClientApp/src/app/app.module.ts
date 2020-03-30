@@ -21,7 +21,7 @@ import { ProdutoComponent } from './produto/produtocomponent'
     ProdutoComponent
   ],
   imports: [
-    BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
+    BrowserModule,
     HttpClientModule,
     FormsModule,
     RouterModule.forRoot([
